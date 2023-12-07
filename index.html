@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="Style.css"> 
+    <title>Carbon Footprint Calculator</title>
+  </head>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="about/Index_about.html">About</a></li>
+      <li><a href="report/report.php">Report</a></li>
+      <li><a href="admin/index_admin.html">Admin</a></li>
+    </ul>
+  </nav>
+
+  <body>
+    <header>
+
+      <div class="header-container">
+        <div class="green-box">
+          <div class="one">
+          <h1>Green Algorithms</h1>         
+          <p1>Understand Your Environmental Impact simplier</p1>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="container">
+        <div class="left-container">
+          <div class="box left-box-1">
+            <h2>Your Device</h2>
+            <p>Calculate your carbon footprint: Select device, hours of use, and country to gain valuable insights into your environmental impact.</p>
+            
+            <form id="device-form" action="update_date.php" method="post">
+
+              <label for="product1" >DEVICE:</label>
+              <select class ="chosen-value" id="product1" name="product1" onchange="updateDisplay()">
+                <option value="">-- Industries --</option>
+              <option value="0.2">Desktop Computer</option>
+              <option value="0.05">Laptop Computer</option>
+              <option value="0.03">Printer</option>
+              <option value="0.15">Projector</option>
+              <option value="5">-- Households --</option>
+              <option value="5">Refrigerators</option>
+              <option value="5">Air conditioners</option>
+              <option value="5">Washing machines</option>
+              <option value="5">Dishwashers</option>
+
+              </select>
+
+              <br>
+
+              <label for="product2"> HOUR OF USE:</label>
+              <select  class ="chosen-value" id="product2" name="product2" onchange="updateDisplay()">
+
+              <option value="1">1 Hours</option>
+              <option value="2">2 Hours</option>
+              <option value="3">3 Hours</option>
+              <option value="4"> 4 Hours</option>
+              <option value="5"> 5 Hours</option>
+              <option value="6"> 6 Hours</option>
+              <option value="7"> 7 Hours</option>
+              <option value="8"> 8 Hours</option>
+              </select>
+
+              <br>
+
+              <label for="product3">COUNTRY:</label>
+              <select  class ="chosen-value" id="product3" name="product3" onchange="updateDisplay()">
+              <option value="Sri lanka">Sri lanka</option>
+              <option value="France">France</option>
+              <option value="The United States">The United States</option>
+              <option value="India">India</option>
+              <option value="Spain">Spain</option>
+              </select>
+              <br>
+              <input type="submit" value="Submit my data" class="submit-button">
+            </form>
+          </div>
+
+          <div class="box left-box-2">
+            <h2>Your Carbon Footprint Cost</h2>
+
+            <div class="image">
+              <img src="img/car.png" alt="Image 1">
+              <div class="hide">10 Km Travel.</div>
+              <p><div id="Car-value"></div></p>
+              
+              <p1>Car</p1>
+              
+            </div>
+            <div class="image">
+              <img src="img/plane.png" alt="Image 2">
+              <div class="hide">London to Paris .</div>
+              <p><div id="Plane-value"></div></p>
+              <p1>Flights</p1>
+            </div>
+            <div class="image">
+              <img src="img/tree.png" alt="Image 3">
+              <div class="hide">Mature tree which absorb around 22 kilograms of CO2 per year</div>
+              <p><div id="tree-value"></div></p>
+              <p1>Trees</p1>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="right-container">
+          <div class="box right-box-1"> 
+              <h2> Carbon footprint </h2>
+              
+              <div class="clearfix">
+                <img src="img/carbon.png" alt="My Image">
+              <h3><div id="display"></div></h3>
+            </div>
+
+
+
+            <p>Track your carbon footprint with our real-time CO2 footprint meter and gain insights into your environmental impact.</p>
+
+            <div class="meter-container">
+              <meter id="my-meter" min="0" max="100" value="0"></meter>
+            </div>
+
+          </div>
+
+          <div class="box right-box-2">
+            <h2>Living Sustainably: Recommended Practices</h2>
+            <p>By following these personalized recommendations based on your selection, you can actively contribute to reducing your carbon footprint and fostering a more sustainable future.</p>
+
+            <h2>Recommendation to decrase carbon footprint:</h2>
+            <ul id="habits-list"></ul>
+
+
+          </div>
+        </div>
+      </div>
+
+    <script src="script.js"></script>
+  </body>
+
+
+
+</html>

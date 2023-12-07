@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="Style_admin.css">
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "admin") {
+                return true; // Proceed with form submission
+            } else {
+                alert("Invalid username or password!");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+
+
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/index_about.html">About</a></li>
+            <li><a href="../report/report.php">Report</a></li>
+            <li><a href="index_admin.html">Admin</a></li>
+        </ul>
+    </nav>
+
+    <div class="header-container">
+        <div class="green-box">
+            <div class="one">
+                <h1>Green Algorithms</h1>         
+                <p1>Understand Your Environmental Impact Simpler</p1>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="login-container">
+            <h1>Login</h1>
+            <form action="dashboard/dashboard_index.php" method="post" onsubmit="return validateForm()">
+            <label for ="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+            
+            <input type="submit" value="Login">
+            </form>
+        </div>
+
+
+
+
+
+
+
+</body>
+</html>
